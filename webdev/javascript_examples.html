@@ -7,13 +7,17 @@
 		<button onclick="clicked();">
 			Submit
 		</button>
+		<form id="form">
+			<input type="radio" name="gender" value="m">Male<br>
+			<input type="radio" name="gender" value="f">Female<br>
+		</form>
 
 	</body>
 
 	<script type="text/javascript">
 		function clicked() {
 
-			alert("Phrase of the day: " + document.getElementById("tb1").value);
+			alert(document.getElementById("tb1").value + " is " + document/getElementById("form").value;
 
 		}
 	</script>
