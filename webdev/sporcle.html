@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		50 State Sporcle
+	</head>
+	<body>
+		<script type="text/javascript">update();</script>
+		<div id="myDiv"></div>
+	</body>
+	<script type="text/javascript">
+	function update() {
+
+		var dt = new Date();
+		var elem = document.getElementById("divElem");
+        elem.textContent = dt.toTimeString();
+
+	}
+	</script>
+</html>
