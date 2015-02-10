@@ -2,7 +2,7 @@
 	<head>
 		
 	</head>
-	<body>
+	<body onload="onload();">
 		<input type="text" id = "tb1">
 		<button onclick="clicked();">
 			Submit
@@ -17,7 +17,12 @@
 	<script type="text/javascript">
 		function clicked() {
 
-			alert(document.getElementById("tb1").value + " is " + document.getElementById("form").value);
+			alert(document.getElementById("tb1").value + " is " + document.getElementById("form")[gender].value);
+
+		}
+		function onload() {
+
+			document.getElementById("tb1").focus();
 
 		}
 	</script>
