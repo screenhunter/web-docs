@@ -2,14 +2,15 @@
 	<head>
 		
 	</head>
+	<p>Enter your name</p>
 	<body onload="onload();">
 		<input type="text" id = "tb1">
 		<button onclick="clicked();">
 			Submit
 		</button>
 		<form id="form">
-			<input type="radio" name="gender" value="m">Male<br>
-			<input type="radio" name="gender" value="f">Female<br>
+			<input type="radio" name="gender" value="Male">Male<br>
+			<input type="radio" name="gender" value="Female">Female<br>
 		</form>
 
 	</body>
@@ -17,7 +18,7 @@
 	<script type="text/javascript">
 		function clicked() {
 
-			alert(document.getElementById("tb1").value + " is " + document.getElementById("form")[gender].value);
+			alert(document.getElementById("tb1").value + " is " + document.getElementById("form")["gender"].value);
 
 		}
 		function onload() {
