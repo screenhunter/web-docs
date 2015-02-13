@@ -92,14 +92,11 @@ function check() {
 			var r = Math.floor(i/10);
 			var c = i % 10;
 			table.rows[r].cells[c].appendChild(document.createTextNode(string));
-
+			document.getElementById("tb").value = "";
 			break;
 
 		}
 
 	}
-
-	document.getElementById("tb").value = "";
-
 
 }
