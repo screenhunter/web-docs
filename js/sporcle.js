@@ -52,6 +52,8 @@ var states = [
 ];
 
 var user = new Array(50);
+var score = 0;
+
 
 function tableCreate() {
 
@@ -90,11 +92,14 @@ function check() {
 			var r = Math.floor(i/10);
 			var c = i % 10;
 			table.rows[r].cells[c].appendChild(document.createTextNode(string));
-			console.log('done');
+
 			break;
 
 		}
 
 	}
+
+	document.getElementById("tb").value = "";
+
 
 }
