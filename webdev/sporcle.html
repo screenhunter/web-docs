@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		50 State Sporcle
+		<title>50 State Sporcle</title>
 	</head>
-	<body>
-		<script type="text/javascript">update();</script>
-		<div id="myDiv"></div>
+	<body onload="tableCreate();">
+		<h1>50 State Sporcle</h1>
+		<input type="text" id = "tb" onkeyup="check();">
+		<div id="tdiv">
+			
+		</div>
 	</body>
-	<script type="text/javascript">
-	function update() {
-
-		var dt = new Date();
-		var elem = document.getElementById("divElem");
-        elem.textContent = dt.toTimeString();
-
-	}
-	</script>
+	<script src="../js/sporcle.js"></script>
 </html>
