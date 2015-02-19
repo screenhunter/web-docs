@@ -3,14 +3,10 @@ table, th, td {
 	border: 1px solid black;
 }
 
-table {
-
-	width:1000px;
-
-}
-
 td {
 
 	width: 100px;
-
+	height: 25px;
+	text-align: center;
+	vertical-align: center;
 }
