@@ -66,6 +66,7 @@ function initialize() {
 		for (var j = 0; j < 10; j++) {
 
 			var td = tr.insertCell();
+			td.id = j+10*i;
 
 		}
 
@@ -89,9 +90,9 @@ function check() {
 
 			states[i] = "";
 			user[i] = string;
-			var r = Math.floor(i/10);
-			var c = i % 10;
-			table.rows[r].cells[c].appendChild(document.createTextNode(string));
+			var x = document.getElementById(i);
+			x.appendChild(document.createTextNode(string));
+			x.style.backgroundColor = "DeepPink";
 			var idiv = document.getElementById("idiv");
 			idiv.replaceChild(document.createTextNode("Score: " + score), idiv.childNodes[0]);
 			score += 1;
