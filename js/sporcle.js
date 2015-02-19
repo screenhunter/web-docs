@@ -92,7 +92,7 @@ function check() {
 			user[i] = string;
 			var x = document.getElementById(i);
 			x.appendChild(document.createTextNode(string));
-			x.style.backgroundColor = "DeepPink";
+			x.style.backgroundColor = "cyan";
 			var idiv = document.getElementById("idiv");
 			idiv.replaceChild(document.createTextNode("Score: " + score), idiv.childNodes[0]);
 			score += 1;
