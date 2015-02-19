@@ -94,8 +94,8 @@ function check() {
 			x.appendChild(document.createTextNode(string));
 			x.style.backgroundColor = "cyan";
 			var idiv = document.getElementById("idiv");
-			idiv.replaceChild(document.createTextNode("Score: " + score), idiv.childNodes[0]);
 			score += 1;
+			idiv.replaceChild(document.createTextNode("Score: " + score), idiv.childNodes[0]);
 			document.getElementById("tb").value = "";
 			break;
 
