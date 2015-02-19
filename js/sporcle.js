@@ -54,13 +54,11 @@ var states = [
 var user = new Array(50);
 var score = 0;
 
+function initialize() {
 
-function tableCreate() {
-
-	var div = document.getElementById("tdiv");
+	var tdiv = document.getElementById("tdiv");
 	var table = document.createElement('table');
 	table.id = "table";
-	table.style.border = "1px solid black";
 
 	for (var i = 0; i < 5; i++) {
 
@@ -68,13 +66,15 @@ function tableCreate() {
 		for (var j = 0; j < 10; j++) {
 
 			var td = tr.insertCell();
-			td.style.border = "1px solid black";
 
 		}
 
 	}
 
 	tdiv.appendChild(table);
+
+	var idiv = document.getElementById("idiv");
+	idiv.appendChild(document.createTextNode("Score: " + score));
 
 }
 
@@ -85,13 +85,16 @@ function check() {
 
 	for (var i = 0; i < states.length; i++) {
 
-		if (states[i].toLowerCase() == string.toLowerCase()) {
+		if (states[i].toLowerCase() == string.toLowerCase() && states[i] != "") {
 
 			states[i] = "";
 			user[i] = string;
 			var r = Math.floor(i/10);
 			var c = i % 10;
 			table.rows[r].cells[c].appendChild(document.createTextNode(string));
+			var idiv = document.getElementById("idiv");
+			idiv.replaceChild(document.createTextNode("Score: " + score), idiv.childNodes[0]);
+			score += 1;
 			document.getElementById("tb").value = "";
 			break;
 
