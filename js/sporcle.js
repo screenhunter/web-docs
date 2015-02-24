@@ -98,13 +98,13 @@ function check() {
 
 		if ((states[i].toLowerCase() == string.toLowerCase() || string == abrev[i]) && states[i] != "") {
 
-			states[i] = "";
-			user[i] = string;
 			var x = document.getElementById(i);
 			x.appendChild(document.createTextNode(states[i]));
 			x.style.backgroundColor = "cyan";
 			var idiv = document.getElementById("idiv");
 			score += 1;
+			states[i] = "";
+			user[i] = string;
 			idiv.replaceChild(document.createTextNode("Score: " + score), idiv.childNodes[0]);
 			document.getElementById("tb").value = "";
 			break;
