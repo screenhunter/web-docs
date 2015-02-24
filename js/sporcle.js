@@ -60,7 +60,7 @@ var time = 300;
 
 function timeR() {
 
-	var min = (int)(time/60);
+	var min = Math.floor(time/60);
 	var sec = time %60;
 	if (sec < 10)
 		return sec + ":" + 0 + "" + min;
