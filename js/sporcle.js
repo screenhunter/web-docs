@@ -62,6 +62,8 @@ function timeR() {
 
 	var min = Math.floor(time/60);
 	var sec = time %60;
+	if (time < 0)
+		return "0:00";
 	if (sec < 10)
 		return min + ":" + 0 + "" + sec;
 	return min + ":" + sec;
@@ -73,7 +75,8 @@ function runUpdateTime() {
 	idiv = document.getElementById("idiv");
 	idiv.replaceChild(document.createTextNode("Time Remaining: " + timeR()), idiv.childNodes[2]);
 		if(time === 0){
-			alert("GAME OVER")
+			alert("GAME OVER");
+			document.getElementById("tb").disabled = true;
 		}
 	}
 
