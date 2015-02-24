@@ -61,7 +61,7 @@ var time = 300;
 function runUpdateTime() {
 	time--;
 	idiv = document.getElementById("idiv");
-	idiv.replaceChild(document.createTextNode("Time Remaining: " + time), idiv.childNodes[2]);
+	idiv.replaceChild(document.createTextNode("Time Remaining: " + time/60 + ":" + time%60), idiv.childNodes[2]);
 		if(time === 0){
 			alert("GAME OVER")
 		}
