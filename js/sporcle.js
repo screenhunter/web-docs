@@ -61,7 +61,7 @@ var time = 300;
 function runUpdateTime() {
 	time--;
 	idiv = document.getElementById("idiv");
-	idiv.replaceChild(document.createTextNode("Time Remaining: " + time/60 + ":" + time%60), idiv.childNodes[2]);
+	idiv.replaceChild(document.createTextNode("Time Remaining: " + moment().startOf('day').seconds(time).format('mm:ss')), idiv.childNodes[2]);
 		if(time === 0){
 			alert("GAME OVER")
 		}
@@ -91,7 +91,7 @@ function initialize() {
 
 	idiv.appendChild(document.createTextNode("Score: " + score));
 	idiv.appendChild(document.createElement("br"));
-	idiv.appendChild(document.createTextNode("Time Remaining: " + time/60 + ":" + time%60));
+	idiv.appendChild(document.createTextNode("Time Remaining: " + moment().startOf('day').seconds(time).format('mm:ss')));
 	document.getElementById("tb").disabled = false;
 	document.getElementById("tb").focus();
 	setInterval( function() {runUpdateTime();}, 1000);
