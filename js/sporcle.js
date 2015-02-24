@@ -56,6 +56,16 @@ var abrev = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","I
 
 var user = new Array(50);
 var score = 0;
+var time = 300;
+
+function runUpdateTime() {
+	time--;
+	idiv = document.getElementById("idiv");
+	idiv.replaceChild(document.createTextNode("Time Remaining: " + time), idiv.childNodes[1]);
+		if(time === 0){
+			alert("GAME OVER")
+		}
+	}
 
 function initialize() {
 
@@ -78,10 +88,12 @@ function initialize() {
 	tdiv.appendChild(table);
 
 	var idiv = document.getElementById("idiv");
+
 	idiv.appendChild(document.createTextNode("Score: " + score));
+	idiv.appendChild(document.createTextNode("Time Remaining: " + time));
 	document.getElementById("tb").disabled = false;
 	document.getElementById("tb").focus();
-
+	setInterval( function() {runUpdateTime();}, 1000);
 
 }
 
