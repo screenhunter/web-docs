@@ -91,7 +91,7 @@ function initialize() {
 
 	idiv.appendChild(document.createTextNode("Score: " + score));
 	idiv.appendChild(document.createElement("br"));
-	idiv.appendChild(document.createTextNode("Time Remaining: " + time));
+	idiv.appendChild(document.createTextNode("Time Remaining: " + time/60 + ":" + time%60));
 	document.getElementById("tb").disabled = false;
 	document.getElementById("tb").focus();
 	setInterval( function() {runUpdateTime();}, 1000);
