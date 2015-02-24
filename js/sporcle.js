@@ -63,8 +63,8 @@ function timeR() {
 	var min = Math.floor(time/60);
 	var sec = time %60;
 	if (sec < 10)
-		return sec + ":" + 0 + "" + min;
-	return sec + ":" + min;
+		return min + ":" + 0 + "" + sec;
+	return min + ":" + sec;
 
 }
 
