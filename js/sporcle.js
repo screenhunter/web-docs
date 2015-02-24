@@ -57,15 +57,8 @@ var abrev = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","I
 var user = new Array(50);
 var score = 0;
 
-function createCountDown(timeRemaining) {
-    var startTime = Date.now();
-    return function() {
-       return timeRemaining - ( Date.now() - startTime );
-    }
-}
-
 function initialize() {
-
+	
 	var tdiv = document.getElementById("tdiv");
 	var table = document.createElement('table');
 	table.id = "table";
