@@ -51,8 +51,18 @@ var states = [
 	"Wyoming"
 ];
 
+var abrev = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
+
+
 var user = new Array(50);
 var score = 0;
+
+function createCountDown(timeRemaining) {
+    var startTime = Date.now();
+    return function() {
+       return timeRemaining - ( Date.now() - startTime );
+    }
+}
 
 function initialize() {
 
@@ -86,7 +96,7 @@ function check() {
 
 	for (var i = 0; i < states.length; i++) {
 
-		if (states[i].toLowerCase() == string.toLowerCase() && states[i] != "") {
+		if ((states[i].toLowerCase() == string.toLowerCase() || string == abrev[i]) && states[i] != "") {
 
 			states[i] = "";
 			user[i] = string;
