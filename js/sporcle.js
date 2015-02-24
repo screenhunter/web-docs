@@ -61,7 +61,7 @@ var time = 300;
 function runUpdateTime() {
 	time--;
 	idiv = document.getElementById("idiv");
-	idiv.replaceChild(document.createTextNode("Time Remaining: " + time), idiv.childNodes[1]);
+	idiv.replaceChild(document.createTextNode("Time Remaining: " + time), idiv.childNodes[2]);
 		if(time === 0){
 			alert("GAME OVER")
 		}
@@ -90,6 +90,7 @@ function initialize() {
 	var idiv = document.getElementById("idiv");
 
 	idiv.appendChild(document.createTextNode("Score: " + score));
+	idiv.appendChild(document.createElement("br"));
 	idiv.appendChild(document.createTextNode("Time Remaining: " + time));
 	document.getElementById("tb").disabled = false;
 	document.getElementById("tb").focus();
