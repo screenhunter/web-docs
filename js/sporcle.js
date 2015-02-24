@@ -122,7 +122,7 @@ function check() {
 
 			var x = document.getElementById(i);
 			x.appendChild(document.createTextNode(states[i]));
-			x.style.backgroundColor = "cyan";
+			x.style.backgroundColor = "LightBlue";
 			var idiv = document.getElementById("idiv");
 			score += 1;
 			states[i] = "";
