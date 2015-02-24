@@ -71,7 +71,6 @@ function timeR() {
 function runUpdateTime() {
 	time--;
 	idiv = document.getElementById("idiv");
-	var min = 
 	idiv.replaceChild(document.createTextNode("Time Remaining: " + timeR()), idiv.childNodes[2]);
 		if(time === 0){
 			alert("GAME OVER")
