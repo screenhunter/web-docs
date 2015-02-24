@@ -58,7 +58,7 @@ var user = new Array(50);
 var score = 0;
 
 function initialize() {
-	
+
 	var tdiv = document.getElementById("tdiv");
 	var table = document.createElement('table');
 	table.id = "table";
@@ -79,6 +79,9 @@ function initialize() {
 
 	var idiv = document.getElementById("idiv");
 	idiv.appendChild(document.createTextNode("Score: " + score));
+	document.getElementById("tb").disabled = false;
+	document.getElementById("tb").focus();
+
 
 }
 
