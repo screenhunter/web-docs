@@ -53,8 +53,6 @@ var states = [
 
 var abrev = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NH","NJ","NM","NY","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"];
 
-
-var user = new Array(50);
 var score = 0;
 var time = 300;
 
@@ -126,7 +124,6 @@ function check() {
 			var idiv = document.getElementById("idiv");
 			score += 1;
 			states[i] = "";
-			user[i] = string;
 			idiv.replaceChild(document.createTextNode("Score: " + score), idiv.childNodes[0]);
 			document.getElementById("tb").value = "";
 			break;
