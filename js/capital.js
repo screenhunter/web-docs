@@ -149,12 +149,12 @@ function runUpdateTime() {
 
 function getHint() {
 
-	var cur = document.getElementById("hdiv").childNodes[2].value;
-	console.log(document.getElementById("hdiv").childNodes[2]);
+	var cur = document.getElementById("hdiv").childNodes[1].value;
+	console.log(cur);
 	if (cur.length < capitals[index].length)
 		cur += capitals[index][cur.length];
 
-	document.getElementById("hdiv").replaceChild(document.createTextNode(cur), document.getElementById("hdiv").childNodes[]);
+	document.getElementById("hdiv").replaceChild(document.createTextNode(cur), document.getElementById("hdiv").childNodes[1]);
 
 }
 
@@ -185,7 +185,6 @@ function initialize() {
 	idiv.appendChild(document.createTextNode("Time Remaining: " + timeR()));
 	document.getElementById("tb").disabled = false;
 	document.getElementById("tb").focus();
-	document.getElementById("hint").disabled = false;
 	setInterval( function() {runUpdateTime();}, 1000);
 
 	var div = document.getElementById("qdiv");
@@ -194,9 +193,14 @@ function initialize() {
 	newQ();
 
 	var hdiv = document.getElementById("hdiv");
-	hdiv.appendChild(document.createElement("BUTTON").appendChild(document.createTextNode("Hint")));
-	hdiv.childNodes[0].onclick = hint();
-
+	var button = document.createElement("BUTTON");
+	button.appendChild(document.createTextNode("Hint"));
+	for (var i = 0; i < hdiv.childNodes.length; i++)
+		hdiv.removeChild(hdiv.childNodes[0]);
+	hdiv.appendChild(button);
+	hdiv.appendChild(document.createTextNode("blah"));
+	console.log(hdiv.childNodes);
+	button.onclick = getHint();
 }
 
 function check() {
