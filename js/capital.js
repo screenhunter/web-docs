@@ -119,6 +119,7 @@ function newQ() {
 		while (qdiv.firstChild)
 			qdiv.removeChild(qdiv.firstChild);
 		qdiv.appendChild(document.createTextNode(states[index]));
+		document.getElementById("hdiv").replaceChild(document.createTextNode(""), document.getElementById("hdiv").childNodes[1]);
 		return index;
 
 	}
