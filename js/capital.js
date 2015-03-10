@@ -150,11 +150,10 @@ function runUpdateTime() {
 function getHint() {
 
 	var cur = document.getElementById("hdiv").childNodes[1];
-	console.log(cur);
-	if (cur.length < capitals[index].length)
-		cur = cur + capitals[index][cur.length];
-
-	document.getElementById("hdiv").replaceChild(document.createTextNode(cur), document.getElementById("hdiv").childNodes[1]);
+	if (cur.length < capitals[index].length) {
+		cur = capitals[index].substring(0, cur.length+1);
+		document.getElementById("hdiv").replaceChild(document.createTextNode(cur), document.getElementById("hdiv").childNodes[1]);
+	}
 
 }
 
@@ -197,12 +196,10 @@ function initialize() {
 	var hdiv = document.getElementById("hdiv");
 	var button = document.createElement("BUTTON");
 	button.appendChild(document.createTextNode("Hint"));
-	var l = hdiv.childNodes.length;
-	for (var i = 0; i < l; i++)
-		hdiv.removeChild(hdiv.childNodes[0]);
-	hdiv.appendChild(button);
+	button.onclick = getHint;
 	hdiv.appendChild(document.createTextNode(""));
-	button.onclick = getHint();
+	hdiv.appendChild(button);
+
 }
 
 function check() {
