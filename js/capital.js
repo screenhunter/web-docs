@@ -192,7 +192,6 @@ function initialize() {
 	var div = document.getElementById("qdiv");
 	for (var i = 0; i < 50; i++)
 		choices[i] = i;
-	newQ();
 
 	var hdiv = document.getElementById("hdiv");
 	var button = document.createElement("BUTTON");
@@ -200,6 +199,8 @@ function initialize() {
 	button.onclick = getHint;
 	hdiv.appendChild(document.createTextNode(""));
 	hdiv.appendChild(button);
+
+	newQ();
 
 }
 
