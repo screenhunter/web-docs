@@ -1,8 +1,9 @@
-var cur = document.body.firstElementChild;
+var cur = null;
 
 function next() {
 
-	cur.style.background = "white";
+	if (cur != null)
+		cur.style.background = "white";
 	if (cur == null)
 		cur = document.body.firstElementChild;
 	else if (cur.childElementCount != 0)
@@ -11,7 +12,7 @@ function next() {
 		cur = cur.nextElementSibling;
 	else
 		while (cur.parentNode.nextElementSibling == null && cur != document.body)
-			cur = cur.parentNode();
+			cur = cur.parentNode;
 
 	if (cur == document.body)
 		cur = document.body.firstElementChild;
