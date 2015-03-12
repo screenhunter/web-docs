@@ -154,6 +154,8 @@ function getHint() {
 	if (cur.length < capitals[index].length) {
 		cur = capitals[index].substring(0, cur.length+1);
 		document.getElementById("hdiv").replaceChild(document.createTextNode(cur), document.getElementById("hdiv").childNodes[1]);
+		score -= 1;
+		document.getElementById("idiv").replaceChild(document.createTextNode("Score: " + score), idiv.childNodes[0]);
 	}
 
 }
