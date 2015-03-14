@@ -1,3 +1,8 @@
-div {
-    transition-duration: 0.25s;
+div,p {
+
+	border: 1px solid;
+	padding: 5px;
+	border-color: rgb(0,0,0);
+	transition-duration: 0.5s;
+
 }
