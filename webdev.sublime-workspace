@@ -1,0 +1,553 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"crea",
+				"createElement"
+			],
+			[
+				"on",
+				"onClickDD"
+			],
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"next",
+				"nextElementSibling"
+			],
+			[
+				"cr",
+				"createElement"
+			],
+			[
+				"choi",
+				"childNodes"
+			],
+			[
+				"new",
+				"newQ"
+			],
+			[
+				"COEF",
+				"COEFAR"
+			],
+			[
+				"reflec",
+				"reflection"
+			],
+			[
+				"dot",
+				"dotproduct"
+			],
+			[
+				"do",
+				"dotproduct"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"cre",
+				"createTextNode"
+			],
+			[
+				"table",
+				"tableCreate"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"for",
+				"form	Tag"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"req",
+				"requireAdmin"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"comma",
+				"command"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"plaer",
+				"playerMove"
+			],
+			[
+				"PL",
+				"playerMove"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"rand",
+				"randPLayer"
+			],
+			[
+				"dic",
+				"dictionary"
+			],
+			[
+				"glut",
+				"glutPostRedisplay"
+			],
+			[
+				"glre",
+				"glutPostRedisplay"
+			],
+			[
+				"MPI_S",
+				"MPI_SOURCE"
+			],
+			[
+				"mpi",
+				"MPI_Status"
+			],
+			[
+				"prin",
+				"printf	printf …"
+			],
+			[
+				"print",
+				"printf	printf …"
+			],
+			[
+				"pr",
+				"printForest"
+			],
+			[
+				"printf",
+				"printf	printf …"
+			],
+			[
+				"ke",
+				"keys"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"termin",
+				"Preferences: Terminal Key Bindings – User"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/rajatkhanna/Documents/Work/web-docs/webdev/formintro.html",
+		"/Users/rajatkhanna/Documents/Work/web-docs/webdev.sublime-project",
+		"/Users/rajatkhanna/Documents/Work/web-docs/js/formintro.js",
+		"/Users/rajatkhanna/Documents/Work/web-docs/js/sporcle.js",
+		"/Users/rajatkhanna/Documents/Work/web-docs/js/domtree.js",
+		"/Users/rajatkhanna/Documents/Work/web-docs/webdev/index.html",
+		"/Users/rajatkhanna/Documents/Work/web-docs/webdev/capital.html",
+		"/Users/rajatkhanna/Documents/Work/web-docs/js/capital.js",
+		"/Users/rajatkhanna/Documents/Work/web-docs/webdev/domtree.html",
+		"/Users/rajatkhanna/Documents/Work/web-docs/css/domtree.css",
+		"/Users/rajatkhanna/Desktop/3dimenmatrix.py",
+		"/Users/rajatkhanna/Desktop/3dimenmatrix",
+		"/Users/rajatkhanna/Desktop/test.txt",
+		"/Volumes/TEST/test.txt",
+		"/Users/rajatkhanna/Documents/Work/web-docs/js/index.js",
+		"/Users/rajatkhanna/Documents/Work/web-docs/webdev/captial.html",
+		"/Users/rajatkhanna/Desktop/dict.txt",
+		"/Users/rajatkhanna/Desktop/temp.py",
+		"/Users/rajatkhanna/Documents/Work/PC/raytrace.c",
+		"/Users/rajatkhanna/Desktop/temp2.py",
+		"/Users/rajatkhanna/Documents/Work/web-docs/css/capital.css",
+		"/Users/rajatkhanna/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/rajatkhanna/Documents/Work/web-docs/index.html",
+		"/Users/rajatkhanna/Documents/Work/web-docs/css/sporcle.css",
+		"/Users/rajatkhanna/Documents/Work/web-docs/webdev/sporcle.html",
+		"/Users/rajatkhanna/Documents/Work/web-docs/css/index.css",
+		"/Users/rajatkhanna/Documents/Work/PC/writeppm.c",
+		"/Users/rajatkhanna/Documents/Work/web-docs/git.sh",
+		"/Users/rajatkhanna/Documents/Work/PC/temp.c",
+		"/Users/rajatkhanna/Downloads/vagul.py",
+		"/Users/rajatkhanna/Documents/Work/web-docs/webdev/javascript_examples.html",
+		"/Users/rajatkhanna/Documents/Work/web-docs/css/index.html",
+		"/Users/rajatkhanna/Library/Application Support/Sublime Text 3/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Users/rajatkhanna/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/rajatkhanna/Library/Application Support/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/Users/rajatkhanna/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/rajatkhanna/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/rajatkhanna/Documents/Work/PC/raytrace2.c",
+		"/Users/rajatkhanna/Library/Application Support/Sublime Text 3/Packages/Alignment/Base File.sublime-settings",
+		"/Users/rajatkhanna/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/rajatkhanna/Documents/web-docs/js/jquery-2.1.0.js",
+		"/Users/rajatkhanna/Documents/web-docs/webdev/semester.html",
+		"/Users/rajatkhanna/Documents/web-docs/webdev/javascript_examples.html",
+		"/Users/rajatkhanna/Documents/web-docs/webdev/sporcle.html",
+		"/Users/rajatkhanna/Documents/web-docs/webdev/index.html",
+		"/Users/rajatkhanna/Documents/web-docs/js/index.js",
+		"/Users/rajatkhanna/Documents/web-docs/css/index.css",
+		"/Users/rajatkhanna/Documents/web-docs/css/bootstrap.css",
+		"/Users/rajatkhanna/Documents/web-docs/css/bootstrap.min.css",
+		"/Users/rajatkhanna/Documents/web-docs/css/semester.css",
+		"/Users/rajatkhanna/Documents/web-docs/css/simple-sidebar.css",
+		"/Users/rajatkhanna/Documents/web-docs/index.html",
+		"/Users/rajatkhanna/Documents/web-docs/styles/semester.css",
+		"/Users/rajatkhanna/Documents/web-docs/webdev/button_example.html",
+		"/Users/rajatkhanna/Documents/webspace/index.html",
+		"/Users/rajatkhanna/Documents/webspace/webdev/semester.html",
+		"/Users/rajatkhanna/Documents/webspace/webdev/index.html",
+		"/Users/rajatkhanna/Documents/webspace/styles/semester.css",
+		"/Users/rajatkhanna/Documents/webdev/index.html",
+		"/Users/rajatkhanna/Documents/webdev/git.sh",
+		"/Users/rajatkhanna/Documents/wolfie/res/itemloc.json",
+		"/Users/rajatkhanna/Documents/wolfie/res/items.json",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/mats.js",
+		"/Users/rajatkhanna/Documents/wolfie/node_modules/tennu-friend-code/plugin.js",
+		"/Users/rajatkhanna/Documents/wolfie/res/poke.txt",
+		"/Users/rajatkhanna/Documents/wolfie/res/units.txt",
+		"/Users/rajatkhanna/Documents/Work/AI/jevenevenevenevenbetter.py",
+		"/Users/rajatkhanna/Documents/Work/AI/jevenevenevenbetter.py",
+		"/Users/rajatkhanna/Documents/Work/AI/reversiModerator.py",
+		"/Users/rajatkhanna/Documents/Work/AI/jevenevenbetter.py",
+		"/Users/rajatkhanna/Documents/Work/AI/jevenbetter.py",
+		"/Users/rajatkhanna/Documents/Work/AI/jbetter.py",
+		"/Users/rajatkhanna/Documents/wolfie/codes.db",
+		"/Users/rajatkhanna/Documents/wolfie/poke.db",
+		"/Users/rajatkhanna/Documents/wolfie/database.db",
+		"/Users/rajatkhanna/Downloads/frep_setup_mac/mac.sh",
+		"/Users/rajatkhanna/Documents/Work/PC/glider_gun.txt",
+		"/Users/rajatkhanna/Documents/Work/PC/ff_p.c",
+		"/Users/rajatkhanna/Documents/Work/PC/conway.c",
+		"/Users/rajatkhanna/Documents/Work/PC/conway_p.c",
+		"/Users/rajatkhanna/Documents/wolfie/git.sh",
+		"/Users/rajatkhanna/Documents/Work/PC/runconway.sh",
+		"/Users/rajatkhanna/Documents/Datamine.json",
+		"/Users/rajatkhanna/Documents/wolfie/node_modules/tennu/tennu_plugins/help.js",
+		"/Users/rajatkhanna/Documents/wolfie/node_modules/tennu/readme.md",
+		"/Users/rajatkhanna/Documents/wolfie/node_modules/tennu-admin/plugin.js",
+		"/Users/rajatkhanna/Documents/wolfie/node_modules/tennu-control/plugin.js",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/commands.js",
+		"/Users/rajatkhanna/Documents/wolfie/node_modules/tennu-control/package.json",
+		"/Users/rajatkhanna/Documents/wolfie/node_modules/tennu-admin/test/requiresAdmin.js",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/judge.js",
+		"/Users/rajatkhanna/Documents/wolfie/items.json",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/temp.js",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/waifu.js",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/code",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/test.js",
+		"/Users/rajatkhanna/Documents/wolfie/test.py",
+		"/Users/rajatkhanna/Documents/wolfie/units.txt",
+		"/Users/rajatkhanna/Documents/wolfie/file.txt",
+		"/Users/rajatkhanna/Documents/Work/PC/gl.c",
+		"/Users/rajatkhanna/Documents/Work/PC/gl_p.c",
+		"/Users/rajatkhanna/Documents/Work/AI/wordLadder.py",
+		"/Users/rajatkhanna/Documents/Work/AI/jrandom.py",
+		"/Users/rajatkhanna/Documents/Work/AI/reversi.py",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/CMD.js",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/JUDGE.js",
+		"/Users/rajatkhanna/Documents/wolfie/tennu_plugins/DATA.js",
+		"/Users/rajatkhanna/Documents/wolfie/package.json",
+		"/Users/rajatkhanna/Documents/wolfie/npm-debug.log",
+		"/Users/rajatkhanna/Documents/Ciara|BOT/config.json",
+		"/Users/rajatkhanna/Documents/Ciara|BOT/tennu_plugins/CMD.js",
+		"/Users/rajatkhanna/Documents/Ciara|BOT/tennu_plugins/DATA.js",
+		"/Users/rajatkhanna/Documents/Ciara|BOT/tennu_plugins/DATAPlugin",
+		"/Users/rajatkhanna/Documents/Ciara|BOT/tennu_plugins/test.js",
+		"/Users/rajatkhanna/Documents/Ciara|BOT/tennu_plugins/blt.js",
+		"/Users/rajatkhanna/Documents/BFBOT/config.json",
+		"/Users/rajatkhanna/Documents/BFBOT/package.json",
+		"/Users/rajatkhanna/Documents/Work/PC/rungl.sh",
+		"/Users/rajatkhanna/Downloads/Android/ADB-Install-Mac.sh",
+		"/Users/rajatkhanna/Documents/Work/AI/jevenevenevenevenbetter",
+		"/Users/rajatkhanna/Documents/Work/AI/reversitest.py",
+		"/Users/rajatkhanna/Downloads/Pranav.py",
+		"/Users/rajatkhanna/Documents/Work/PC/rungl_p.sh",
+		"/Users/rajatkhanna/Documents/Work/AI/ghost.py",
+		"/Users/rajatkhanna/Documents/Work/AI/test.py",
+		"/Users/rajatkhanna/Documents/Work/AI/ghostDictionary.txt",
+		"/Users/rajatkhanna/Documents/Work/PC/rungl_c.sh",
+		"/Users/rajatkhanna/Documents/Work/PC/mpiDemo.c"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"(50)",
+			"consol",
+			" ",
+			"\\n",
+			"print",
+			"montgomer",
+			"user",
+			"sTriple",
+			"triple",
+			"Point",
+			"^",
+			"* ",
+			" ",
+			"temp",
+			"form",
+			"s.x",
+			"i",
+			"R",
+			"cz",
+			"cy",
+			"cx",
+			"z0",
+			"dz",
+			"y0",
+			"dy",
+			"x0",
+			"cx",
+			"dx",
+			"sprintf",
+			"	\n",
+			"elza",
+			"ronel",
+			"uda",
+			"girl",
+			"Deemo",
+			"deemo",
+			"	",
+			" ",
+			",",
+			"\"",
+			"db",
+			"   ",
+			" ",
+			"   ",
+			"    ",
+			"//",
+			"@",
+			"signas",
+			"raydn",
+			", '', ",
+			"lily",
+			"cont",
+			"alphabeta",
+			"scr",
+			"Deemo",
+			"Luther",
+			"Raydn",
+			"Garnan",
+			"Kuda",
+			"Gravion",
+			"azae",
+			"ulkina",
+			"Hogar",
+			"Dilma",
+			"Hogar",
+			"Raydn",
+			"mariude",
+			"Darvanshel",
+			"Narza",
+			"oulu",
+			"kajah",
+			"tag",
+			"/",
+			"30",
+			"sum",
+			"variables",
+			"temp",
+			"expression",
+			"variables",
+			"input",
+			"]\n",
+			"q.append",
+			"append",
+			" ",
+			"avg: ",
+			"prob: ",
+			"print",
+			"2300054"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "webdev.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/wolfie/tennu_plugins/waifu.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
