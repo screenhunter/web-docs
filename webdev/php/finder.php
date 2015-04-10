@@ -6,6 +6,6 @@
     #$pattern = '/' . $letter . '[a-zA-Z]{' . $length . '}/';
     $pattern = '/^' . $letter . '/';	
     echo $pattern;
-    preg_match_all('/dog/', $file, $matches);
+    preg_match_all('/^dog/', $file, $matches);
     print_r($matches);
 ?>
