@@ -6,6 +6,6 @@
     echo $file;
     preg_match_all($pattern, $file, $matches);
     foreach ($matches as $value) {
-    	echo $value . "<br>";
+    	echo $value;
     }
 ?>
