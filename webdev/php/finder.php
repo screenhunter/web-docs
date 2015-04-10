@@ -7,5 +7,5 @@
     $pattern = '/^' . $letter . '/';	
     echo $pattern;
     preg_match_all($pattern, $file, $matches);
-    echo $matches;
+    print_r($matches);
 ?>
