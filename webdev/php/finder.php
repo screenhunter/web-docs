@@ -4,8 +4,8 @@
     $file = file_get_contents("../../res/enable1.txt");
     #echo $file;
     #$pattern = '/' . $letter . '[a-zA-Z]{' . $length . '}/';
-    $pattern = '/^' . $letter . '/';	
+    $pattern = '/' . $letter . '/';	
     echo $pattern;
-    preg_match_all('/\^dog/', $file, $matches);
+    preg_match_all($pattern, $file, $matches);
     print_r($matches);
 ?>
