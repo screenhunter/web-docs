@@ -4,8 +4,8 @@
     $file = file_get_contents("../../res/enable1.txt");
     $pieces = explode(" ", $file);
     #echo $file;
-    #$pattern = '/' . $letter . '[a-zA-Z]{' . $length . '}/';
-    $pattern = '/^' . $letter . '/';	
+    $pattern = '/' . $letter . '[a-zA-Z]{' . $length . '}/\n';
+    #$pattern = '/' . $letter . '/';	
     echo $pattern;
     foreach ($pieces as $value) {
     	echo preg_match_all($pattern, $value);
