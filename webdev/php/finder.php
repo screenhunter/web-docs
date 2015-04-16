@@ -8,7 +8,7 @@
     #$pattern = '/' . $letter . '/';	
     #echo $pattern;
     foreach ($pieces as $value) {
-        if (preg_match($pattern, $value)) == 1
+        if (preg_match($pattern, $value))
             echo $value;
 	}
 ?>
