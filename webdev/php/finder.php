@@ -9,6 +9,6 @@
     #echo $pattern;
     foreach ($pieces as $value) {
         if (preg_match($pattern, $value))
-            echo $value;
+            echo $pattern . "*" . $value;
 	}
 ?>
