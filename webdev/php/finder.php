@@ -9,6 +9,7 @@
     #$pattern = '/' . $letter . '/';	
     #echo $pattern;
     foreach ($pieces as $value) {
-    	print_r(preg_match_all($pattern, $value));
+        if preg_match($pattern, $value) == 1
+            echo $value;
 	}
 ?>
