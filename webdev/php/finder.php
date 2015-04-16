@@ -8,6 +8,6 @@
     #$pattern = '/' . $letter . '/';	
     #echo $pattern;
     foreach ($pieces as $value) {
-    	echo preg_match_all($pattern, $value);
+    	print_r(preg_match_all($pattern, $value));
 	}
 ?>
