@@ -6,7 +6,7 @@
     #echo $file;
     $pattern = '/' . $letter . '[a-zA-Z]{' . $length . '}/';
     #$pattern = '/' . $letter . '/';	
-    echo $pattern;
+    #echo $pattern;
     foreach ($pieces as $value) {
     	echo preg_match_all($pattern, $value);
 	}
