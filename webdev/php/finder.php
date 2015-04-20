@@ -2,13 +2,13 @@
     $letter = $_GET["letter"];
     $length = intval($_GET["length"]) - 1;
     $file = file_get_contents("../../res/enable1.txt");
-    $pieces = explode(" ", $file);
+    $pieces = explode("\n", $file);
     #echo $file;
     $pattern = "/([a-zA-Z]{0,})(" . $letter . "[a-zA-Z]{" . $length . "})([a-zA-Z]{0,})/";
     #$pattern = '/' . $letter . '/';	
     #echo $pattern;
     foreach ($pieces as $value) {
         if (preg_match($pattern, $value) == 1)
-            echo $pattern . "*" . $value;
+            echo $pattern . "*" . $value . ;
 	}
 ?>
