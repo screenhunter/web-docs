@@ -5,10 +5,25 @@
 	</head>
 	<body onload="intialize()">
 		<form action="php/finder.php" method="get">
-			Initial Letter:   <input type="text" name="letter"><br>
-			Length: <input type="text" name="length"><br>
-			<button type="submit">Find</button>
+			Initial Letter:
+			<input type="text" name="letter" id="letter" onchange="check();"><br>
+			Length:
+			<input type="text" name="length" id="length" onchange="check();"><br>
+			<button type="submit" id="btn" disabled="true">Find</button>
 		</form>
 		<div id="Result"></div>
 	</body>
+
+	<script type="text/javascript">
+		function check() {
+
+			a = document.getElementById("letter").value;
+			b = document.getElementById("length").value;
+			if (a == "/[a-zA-z]/" && b == /[0-9]{1,}/)
+				document.getElementById("btn").disabled = true;
+			else
+				document.getElementById("btn").disabled = false;
+		}
+	</script>
+
 </html>
