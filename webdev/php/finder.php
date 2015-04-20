@@ -5,11 +5,11 @@
     $pieces = explode(" ", $file);
     print_r($pieces);
     #echo $file;
-    $pattern = '/' . $letter . '[a-zA-Z]{' . $length . '}/';
+    $pattern = "([a-zA-Z]{0,})(" . $letter . "[a-zA-Z]{" . $length . "})([a-zA-Z]{0,})";
     #$pattern = '/' . $letter . '/';	
     #echo $pattern;
     foreach ($pieces as $value) {
-        //if (preg_match($pattern, $value))
-            //echo $pattern . "*" . $value;
+        if (preg_match($pattern, $value))
+            echo $pattern . "*" . $value;
 	}
 ?>
