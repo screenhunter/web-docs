@@ -19,7 +19,7 @@
 
 			a = document.getElementById("letter").value;
 			b = document.getElementById("length").value;
-			p1 = new RegExp("/[a-zA-z]/");
+			p1 = new RegExp("/[a-zA-z]{1}/");
 			p2 = new RegExp("/[0-9]{1,}/");
 			if (p1.test(a) && p2.test(b))
 				document.getElementById("btn").disabled = false;
