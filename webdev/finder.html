@@ -6,9 +6,9 @@
 	<body onload="intialize()">
 		<form action="php/finder.php" method="get">
 			Initial Letter:
-			<input type="text" name="letter" id="letter" onchange="check();"><br>
+			<input type="text" name="letter" id="letter" oninput="check();"><br>
 			Length:
-			<input type="text" name="length" id="length" onchange="check();"><br>
+			<input type="text" name="length" id="length" oninput="check();"><br>
 			<button type="submit" id="btn" disabled="true">Find</button>
 		</form>
 		<div id="Result"></div>
