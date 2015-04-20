@@ -4,7 +4,7 @@
     $file = file_get_contents("../../res/enable1.txt");
     $pieces = explode(" ", $file);
     #echo $file;
-    $pattern = "([a-zA-Z]{0,})(" . $letter . "[a-zA-Z]{" . $length . "})([a-zA-Z]{0,})";
+    $pattern = "/([a-zA-Z]{0,})(" . $letter . "[a-zA-Z]{" . $length . "})([a-zA-Z]{0,})/";
     #$pattern = '/' . $letter . '/';	
     #echo $pattern;
     foreach ($pieces as $value) {
