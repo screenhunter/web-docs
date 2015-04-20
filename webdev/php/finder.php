@@ -9,6 +9,6 @@
     #echo $pattern;
     foreach ($pieces as $value) {
         if (preg_match($pattern, $value) == 1)
-            echo  $value. "\n";
+            echo  nl2br($value . "\n");
 	}
 ?>
