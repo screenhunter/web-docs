@@ -19,10 +19,12 @@
 
 			a = document.getElementById("letter").value;
 			b = document.getElementById("length").value;
-			if (a == "/[a-zA-z]/" && b == /[0-9]{1,}/)
-				document.getElementById("btn").disabled = true;
-			else
+			p1 = new RegExp("/[a-zA-z]/");
+			p2 = new RegExp("/[0-9]{1,}/");
+			if (p1.test(a) && p2.test(b))
 				document.getElementById("btn").disabled = false;
+			else
+				document.getElementById("btn").disabled = true;
 		}
 	</script>
 
