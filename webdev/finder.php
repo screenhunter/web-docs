@@ -15,7 +15,7 @@
 			<?php
 			    $letter = $_GET["letter"];
 			    $length = intval($_GET["length"]) - 1;
-			    $file = file_get_contents("../../res/enable1.txt");
+			    $file = file_get_contents("../res/enable1.txt");
 			    $pieces = explode("\n", $file);
 			    #echo $file;
 			    $pattern = "/^(" . $letter . "[a-zA-Z]{" . $length . "})$/";
