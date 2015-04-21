@@ -4,7 +4,7 @@
 		<title>Form Intro</title>
 	</head>
 	<body onload="intialize()">
-		<form action="php/finder.php" method="get">
+		<form action="finder.php" method="get">
 			Initial Letter:
 			<input type="text" name="letter" id="letter" oninput="check();"><br>
 			Length:
