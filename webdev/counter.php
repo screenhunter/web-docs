@@ -13,7 +13,7 @@
 		fwrite($file, $count);
 		fclose($file);
 
-		echo nl2br("\n");
+		echo nl2br("\r\n");
 
 		$file = fopen("../res/date.txt", "r");
 		$date = fread($file,filesize("../res/date.txt"));
