@@ -13,8 +13,8 @@
 		fwrite($file, $count);
 		fclose($file);
 		$file = fopen("../res/date.txt", "r");
-		$count = fread($file,filesize("../res/date.txt"));
-		echo "Last visit at: " . ;
+		$date = fread($file,filesize("../res/date.txt"));
+		echo "Last visit at: " . $date;
 		fclose($file);
 		$file = fopen("../res/date.txt", "w");
 		fwrite($file, date('m/d/Y H:i:s'));
