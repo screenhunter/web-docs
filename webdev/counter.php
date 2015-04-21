@@ -12,6 +12,9 @@
 		$file = fopen("../res/count.txt", "w");
 		fwrite($file, $count);
 		fclose($file);
+
+		echo nl2br("\n");
+
 		$file = fopen("../res/date.txt", "r");
 		$date = fread($file,filesize("../res/date.txt"));
 		echo "Last visit at: " . $date;
