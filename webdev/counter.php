@@ -5,7 +5,7 @@
 	</head>
 	<body>
 	<?php
-		$file = "../res/counter.json"
+		$file = "../res/counter.json";
 		$array = json_decode(file_get_contents($file), true);
 		array["count"] += 1;
 		echo "You are visitor #" . array["count"];
