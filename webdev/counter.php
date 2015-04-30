@@ -11,7 +11,7 @@
 		echo "You are visitor #" . $array["count"];
 		echo "Last visit at: " . $array["date"];
 		$array["date"] = date('m/d/Y H:i:s');
-		file_put_contents($file, json_encode($json));
+		file_put_contents($file, json_encode($array));
 	?>
 	</body>
 </html>
