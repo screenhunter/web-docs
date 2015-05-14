@@ -6,7 +6,7 @@
 	<body>
 	<?php
 		$db = new SQLite3("../res/counter.db");
-		$db -> exec('CREATE TABLE table(id INTEGER, date TEXT);');
+		$db -> exec('CREATE TABLE table (id INTEGER, date TEXT);');
 		$result = $db -> query('SELECT id FROM table');
 		while ($row = $result->fetchArray()) {
     		var_dump($row);
