@@ -6,10 +6,10 @@
 	<body>
 	<?php
 		$db = new SQLite3("../res/counter.db");
-		$db -> exec('CREATE TABLE IF NOT EXISTS data(id INTEGER, time TEXT, PRIMARY KEY (id));
+		$db -> exec('CREATE TABLE IF NOT EXISTS data(time TEXT);
 			INSERT INTO data VAlUES("'.date('m/d/Y H:i:s').'");
 		');
-		$result = $db -> query('SELECT id FROM data');
+		$result = $db -> query('SELECT time FROM data');
 		while ($row = $result->fetchArray()) {
     		var_dump($row);
 		}
