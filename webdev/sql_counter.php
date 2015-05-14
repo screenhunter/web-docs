@@ -6,7 +6,6 @@
 	<body>
 	<?php
 		$db = new SQLite3("../res/counter.db");
-		$db -> exec('CREATE TABLE table(id INTEGER, date TEXT);');
 		$db->exec('CREATE TABLE people (name COLLATE translit_ascii);
 			INSERT INTO people VALUES ("Émilie");
 			INSERT INTO people VALUES ("Zebra");
