@@ -9,7 +9,7 @@
 		$db -> exec('CREATE TABLE IF NOT EXISTS data(id INTEGER, time TEXT, PRIMARY KEY (id));
 			INSERT INTO data(time) VAlUES("hello");
 		');
-		$result = $db -> query('SELECT id FROM data');
+		$result = $db -> query('SELECT time FROM data');
 		while ($row = $result->fetchArray()) {
     		var_dump($row);
 		}
