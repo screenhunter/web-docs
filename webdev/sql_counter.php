@@ -6,7 +6,7 @@
 	<body>
 	<?php
 		$db = new SQLite3("../res/counter.db");
-		$db->exec('CREATE TABLE table (id INTEGER, thing TEXT);');
+		$db->exec('CREATE TABLE data (id INTEGER, thing TEXT);');
 
 while ($row = $result->fetchArray())
 {
