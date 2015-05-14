@@ -7,8 +7,8 @@
 	<?php
 		$db = new SQLite3("../res/counter.db");
 		$db -> exec('
-			CREATE TABLE IF NOT EXISTS table(id INTEGER AUTO_INCREMENT PRIMARY KEY, date TEXT);
-			INSERT INTO table VAlUES("test");
+			CREATE TABLE IF NOT EXISTS table(id INTEGER PRIMARY KEY, date TEXT);
+			INSERT INTO table(1) VAlUES("' . date('m/d/Y H:i:s'). '");
 		');
 		$result = $db -> query('SELECT id FROM table');
 		while ($row = $result->fetchArray()) {
