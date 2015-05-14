@@ -22,7 +22,7 @@
 		$count -= 1;
 
 		$result = $db->query('SELECT time FROM ' . $table . ' WHERE id = ' . $count);
-		while ($row = mysql_fetch_assoc($result)) {
+		while ($row = $result->fetch_assoc()) {
 			echo $row["usr"];
 		}
 	?>
