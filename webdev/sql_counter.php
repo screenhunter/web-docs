@@ -6,6 +6,13 @@
 	<body>
 	<?php
 		$db = new SQLite3("../res/counter.db");
+
+		$db->createCollation('translit_ascii', function ($a, $b) {
+			$a = transliterator_transliterate('Any-Latin; Latin-ASCII; Lower()', $a);
+			$b = transliterator_transliterate('Any-Latin; Latin-ASCII; Lower()', $b);
+			return strcmp($a, $b);
+		});
+
 		$db->exec('CREATE TABLE people (name COLLATE translit_ascii);
 			INSERT INTO people VALUES ("Émilie");
 			INSERT INTO people VALUES ("Zebra");
