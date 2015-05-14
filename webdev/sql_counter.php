@@ -22,8 +22,8 @@
 		$count -= 1;
 
 		$result = $db->query('SELECT time FROM ' . $table . ' WHERE id = ' . $count);
-		while ($row = $result->fetch_all()) {
-			echo $row["usr"];
+		while ($row = $result->fetchArray()) {
+			print_r($row);
 		}
 	?>
 	</body>
