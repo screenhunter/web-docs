@@ -6,7 +6,7 @@
 	<body>
 	<?php
 		$db = new SQLite3("../res/counter.db");
-		$db -> exec('CREATE TABLE IF NOT EXISTS table (
+		$db -> exec('CREATE TABLE IF NOT EXISTS table(
 			id INT(6) UNSIGNED AUTO_INCREMENT,
 			date VARCHAR(30) NOT NULL,
 			PRIMARY KEY (id)
