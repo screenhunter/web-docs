@@ -14,15 +14,15 @@
 		else
 			$table = "even";
 
-		$db -> exec('CREATE TABLE IF NOT EXISTS ' + $table + '(id INTEGER, time TEXT, PRIMARY KEY (id));
-			INSERT INTO ' + $table + '(time) VAlUES("' + time + '");
+		$db -> exec('CREATE TABLE IF NOT EXISTS ' . $table . '(id INTEGER, time TEXT, PRIMARY KEY (id));
+			INSERT INTO ' . $table . '(time) VAlUES("' . time . '");
 		');
 
-		$result = $db->query('SELECT * FROM ' + $table);
+		$result = $db->query('SELECT * FROM ' . $table);
 		$rows = $result->numRows();
 		$rows -= 1;
 
-		$result = $db->query('SELECT time FROM ' + $table + ' WHERE id = ' + $rows + ';');
+		$result = $db->query('SELECT time FROM ' . $table . ' WHERE id = ' . $rows . ';');
 		echo $result;
 	?>
 	</body>
