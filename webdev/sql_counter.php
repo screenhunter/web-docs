@@ -6,28 +6,18 @@
 	<body>
 	<?php
 		$db = new SQLite3("../res/counter.db");
-		sqlite_query($db, 'CREATE TABLE IF NOT EXISTS table (
+		$db -> exec('CREATE TABLE IF NOT EXISTS table (
 			id INT(6) UNSIGNED AUTO_INCREMENT,
 			date VARCHAR(30) NOT NULL,
 			PRIMARY KEY (id)
 		)');
-		sqlite_query($db, 'INSERT INTO table
+		$db -> exec('INSERT INTO table
 			VAlUES(' + date('m/d/Y H:i:s') + ')
-		)');
-		$result = sqlite_query($db, 'select 1 from foo');
-		var_dump(sqlite_fetch_array($result)); 
+		');
+		$result = $db -> query('SELECT id FROM foo');
+		while ($row = $result->fetchArray()) {
+    		var_dump($row);
+		}
 	?>
 	</body>
 </html>
-
-
-
-CREATE DATABASE IF NOT EXISTS countDB
-USE countDB
-CREATE TABLE IF NOT EXISTS table (
-	id INT(6) UNSIGNED AUTO_INCREMENT,
-	date VARCHAR(30) NOT NULL,
-	PRIMARY KEY (id)
-)
-INSERT INTO table
-	VAlUES()
