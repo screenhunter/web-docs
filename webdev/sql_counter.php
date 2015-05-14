@@ -15,7 +15,7 @@
 			$table = "even";
 
 		$db -> exec('CREATE TABLE IF NOT EXISTS ' . $table . '(id INTEGER, time TEXT, PRIMARY KEY (id));
-			INSERT INTO ' . $table . '(time) VAlUES("' . time . '");
+			INSERT INTO ' . $table . '(time) VAlUES("' . $time . '");
 		');
 
 		$count = $db->lastInsertRowID;
