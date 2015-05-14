@@ -21,10 +21,11 @@
 		$count = $db->lastInsertRowID;
 		$count -= 1;
 
-		$result = $db->query('SELECT time FROM ' . $table . ' WHERE id = ' . $count);
-		while ($row = $result->fetchArray()) {
+		$result = $db->query('SELECT time FROM ' . $table);
+		foreach($result as $row) {
 			print_r($row);
 		}
+		
 	?>
 	</body>
 </html>
