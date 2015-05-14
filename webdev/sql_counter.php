@@ -18,11 +18,10 @@
 			INSERT INTO ' . $table . '(time) VAlUES("' . time . '");
 		');
 
-		$result = $db->query('SELECT * FROM ' . $table);
-		$rows = $result->numRows();
-		$rows -= 1;
+		$count = $db->lastInsertRowID;
+		$count -= 1;
 
-		$result = $db->query('SELECT time FROM ' . $table . ' WHERE id = ' . $rows . ';');
+		$result = $db->query('SELECT time FROM ' . $table . ' WHERE id = ' . $count);
 		echo $result;
 	?>
 	</body>
