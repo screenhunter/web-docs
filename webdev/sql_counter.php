@@ -5,7 +5,7 @@
 	</head>
 	<body>
 	<?php
-		$db = sqlite_open('../res/counter.db');
+		$db = new SQLite3("../res/counter.db");
 		sqlite_query($db, 'CREATE TABLE IF NOT EXISTS table (
 			id INT(6) UNSIGNED AUTO_INCREMENT,
 			date VARCHAR(30) NOT NULL,
