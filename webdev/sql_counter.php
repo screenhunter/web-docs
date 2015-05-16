@@ -21,7 +21,7 @@
 		$count = $db->lastInsertRowID;
 		$count -= 1;
 
-		$result = $db->query('SELECT time FROM ' . $table);
+		$result = $db->query('SELECT time FROM ' . $table .' WHERE id = ' . $count);
 		while ($row = $result->fetchArray()) {
 			var_dump($row);
 			echo nl2br("\r\n");
