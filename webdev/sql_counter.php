@@ -22,9 +22,9 @@
 		$count -= 1;
 
 		$result = $db->query('SELECT time FROM ' . $table);
-
-		echo $result;
-		
+		while ($row = $results->fetchArray()) {
+			var_dump($row);
+		}		
 	?>
 	</body>
 </html>
