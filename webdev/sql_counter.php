@@ -24,6 +24,7 @@
 		$result = $db->query('SELECT time FROM ' . $table);
 		while ($row = $result->fetchArray()) {
 			var_dump($row);
+			nl2br("\r\n");
 		}		
 	?>
 	</body>
