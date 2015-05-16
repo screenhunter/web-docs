@@ -25,7 +25,7 @@
 
 		$result = $db->query('SELECT time FROM ' . $table .' WHERE id = ' . $count);
 		while ($row = $result->fetchArray()) {
-			echo $row["time"];
+			echo "Last visit to the " . $table . " minute page: " . $row["time"];
 			echo nl2br("\r\n");
 		}		
 	?>
