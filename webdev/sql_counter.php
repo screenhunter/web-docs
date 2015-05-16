@@ -20,7 +20,9 @@
 
 		$count = $db->lastInsertRowID;
 		$count -= 1;
-
+		echo $count;
+		echo nl2br("\r\n");
+		
 		$result = $db->query('SELECT time FROM ' . $table .' WHERE id = ' . $count);
 		while ($row = $result->fetchArray()) {
 			var_dump($row);
