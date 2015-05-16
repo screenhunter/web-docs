@@ -25,7 +25,7 @@
 
 		$result = $db->query('SELECT time FROM ' . $table .' WHERE id = ' . $count);
 		while ($row = $result->fetchArray()) {
-			var_dump($row);
+			echo $row["time"];
 			echo nl2br("\r\n");
 		}		
 	?>
