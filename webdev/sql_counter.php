@@ -19,9 +19,9 @@
 		');
 
 		$count = $db->lastInsertRowID();
-		$count -= 1;
-		echo $count;
+		echo "Number of visits to the " . $table . " page: " . $count;
 		echo nl2br("\r\n");
+		$count -= 1;
 
 		$result = $db->query('SELECT time FROM ' . $table .' WHERE id = ' . $count);
 		while ($row = $result->fetchArray()) {
