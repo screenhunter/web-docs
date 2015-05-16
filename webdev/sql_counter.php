@@ -22,7 +22,7 @@
 		$count -= 1;
 
 		$result = $db->query('SELECT time FROM ' . $table);
-		while ($row = $results->fetchArray()) {
+		while ($row = $result->fetchArray()) {
 			var_dump($row);
 		}		
 	?>
