@@ -4,10 +4,9 @@
 		<title>Latex Generator</title>
 	</head>
 	<body>
-		<form action="demo_form.asp">
-			Heading: <input type="text" id="head"><br>
-			Author: <input type="text" id="name"><br>
-  			<input type="submit" value="Submit">
-  		</form>
+		Heading: <input type="text" id="head"><br>
+		Author: <input type="text" id="name"><br>
+		<button onclick="generate">Generate</button>
 	</body>
+	<script src="../js/latex_gen.js"></script>
 </html>
