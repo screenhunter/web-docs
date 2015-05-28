@@ -31,7 +31,7 @@
 	$fh = fopen($fileName, 'w');
 	fwrite($fh, $text);
 	fclose($fh);
-	shell_exec("pdflatex ". $fileName ")";
+	shell_exec("pdflatex --interaction batchmode ". $fileName ")";
 
 	$db = new SQLite3("../res/tex.db");
 	$db -> exec('CREATE TABLE IF NOT EXISTS data(id TEXT, file TEXT, PRIMARY KEY (id));
