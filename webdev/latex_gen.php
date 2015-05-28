@@ -27,14 +27,14 @@
 	$text = $text . '\end{document}' . "\r\n";
 
 	$key = md5(get_client_ip());
-	$filename = "document.tex";
+	$fileName = "document.tex";
 	$fh = fopen($fileName, 'w');
 	fwrite($fh, $text);
 	fclose($fh);
 
 	$db = new SQLite3("../res/tex.db");
 	$db -> exec('CREATE TABLE IF NOT EXISTS data(id TEXT, file TEXT, PRIMARY KEY (id));
-			INSERT INTO  data(file) (id, file) VAlUES(' . $key . ', ' . $fileName . '");
+			INSERT INTO  data(file) (id, file) VAlUES("' . $key . '", "' . $fileName . '");
 		');
 
 	echo '<form action = "' . $db->query('SELECT file FROM  data WHERE id = 1')->fetchArray()[md5(get_client_ip())] . '">';
