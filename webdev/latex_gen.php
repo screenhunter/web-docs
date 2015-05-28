@@ -37,7 +37,7 @@
 			INSERT OR REPLACE INTO  data (id, file) VAlUES("' . $key . '", "' . $fileName . '");
 		');
 
-	echo '<form action = "' . $db->query('SELECT file FROM  data')->fetchArray()[md5(get_client_ip())] . '">';
+	echo '<form action = "' . $db->query('SELECT file FROM  data')->fetchArray()[$key] . '">';
 	echo '<button type = "submit"> Download Your Latex File! </button>';
 	echo '</form>';
 
