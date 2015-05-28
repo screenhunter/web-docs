@@ -28,7 +28,7 @@
 
 	$key = md5(get_client_ip());
 	$filename = "document.tex";
-	$fh = fopen($fileName, 'w')
+	$fh = fopen($fileName, 'w');
 	fwrite($fh, $text);
 	fclose($fh);
 
