@@ -27,14 +27,15 @@
 	$text = $text . '\end{document}' . "\r\n";
 
 	$key = md5(get_client_ip());
-	$fileName = "document.tex";
+	$fileName = $key . ".tex";
 	$fh = fopen($fileName, 'w');
 	fwrite($fh, $text);
 	fclose($fh);
+	shell_exec("pdflatex ". $fileName ")";
 
 	$db = new SQLite3("../res/tex.db");
 	$db -> exec('CREATE TABLE IF NOT EXISTS data(id TEXT, file TEXT, PRIMARY KEY (id));
-			INSERT OR REPLACE INTO data (id, file) VAlUES("' . $key . '", "' . $fileName . '");
+			INSERT OR REPLACE INTO data (id, file) VAlUES("' . $key . '", "' . $key . '.pdf");
 		');
 
 	$result = $db->query('SELECT file FROM data WHERE id = "' . $key . '"');
