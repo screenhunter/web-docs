@@ -34,7 +34,7 @@
 
 	$db = new SQLite3("../res/tex.db");
 	$db -> exec('CREATE TABLE IF NOT EXISTS data(id TEXT, file TEXT, PRIMARY KEY (id));
-			INSERT INTO  data (id, file) VAlUES("' . $key . '", "' . $fileName . '");
+			INSERT OR REPLACE INTO  data (id, file) VAlUES("' . $key . '", "' . $fileName . '");
 		');
 
 	echo '<form action = "' . $db->query('SELECT file FROM  data')->fetchArray()[md5(get_client_ip())] . '">';
