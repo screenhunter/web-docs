@@ -17,7 +17,7 @@
 			$ipaddress = 'UNKNOWN'; 
 		return $ipaddress; 
 	}
-	$  = "\documentclass{article} \r\n \r\n";
+	$text  = "\documentclass{article} \r\n \r\n";
 	$text = $text . "\begin{document} \r\n \r\n";
 	$title = rtrim($_GET['title'], '%09%09');
 	$text = $text . '\title{' . $title . "} \r\n";
