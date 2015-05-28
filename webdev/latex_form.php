@@ -8,7 +8,7 @@
 			<p>Title</p>
 			<textarea cols="100" rows="1" name = "title"></textarea>
 			<p>Author</p>
-			<textarea cols="100" rows="1" name = "auth"></textarea>
+			<textarea cols="100" rows="1" name = "author"></textarea>
 			<button type = "submit">Generate</button>
 		</form>
 	</body>
