@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 	function get_client_ip() {
 		$ipaddress = ''; 

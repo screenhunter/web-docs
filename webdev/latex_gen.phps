@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 	function get_client_ip() {
 		$ipaddress = ''; 
@@ -41,6 +42,7 @@
 	$result = $db->query('SELECT file FROM data WHERE id = "' . $key . '"');
 	while ($row = $result->fetchArray())
 		echo '<form action = "' . $row["file"] . '">';
+	$db -> exec('DELETE FROM data where id = "' . $key . '"');
 	echo '<button type = "submit"> Download Your Latex File! </button>';
 	echo '</form>';
 
