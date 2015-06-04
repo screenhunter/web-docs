@@ -81,9 +81,7 @@
 				
 			}
 
-			if (isset($_POST["add"])) {
-
-				if (strlen($message) == 0)
+			if (strlen($message) == 0)
 					return;
 
 				$message = rtrim($_POST['rem'], '%09%09');
@@ -108,8 +106,6 @@
 
 				}
 
-			} else {
-
 				$db = new SQLite3("../res/message.db");
 				$result = $db->query('SELECT pri FROM data');
 				while ($row = $result->fetchArray())
@@ -118,7 +114,6 @@
 						return;
 					}
 
-			}
 
 		?>
 
