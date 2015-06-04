@@ -44,7 +44,7 @@
 					$day = $value;
 				} else if ($value < 59) {
 					$month = "February";
-					$day = $value - 31
+					$day = $value - 31;
 				} else if ($value < 90) {
 					$month = "March";
 					$day = $value - 59;
