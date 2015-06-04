@@ -98,18 +98,16 @@
 
 				echo $row["mess"] . " " . convert($row["pri"]);
 				echo '<form action="messageboard.php" method="POST">';
-				echo '<button id = "id-' . $row["pri"] . '" type = "submit"> Delete </button>';
+				echo '<button name = "id-' . $row["pri"] . '" type = "submit"> Delete </button>';
 				echo '</form>';
 
 			}
 
 			$result = $db->query('SELECT pri FROM data');
-			while ($row = $result->fetchArray()){
-				echo 'id-' . $row["pri"];
+			while ($row = $result->fetchArray())
 				if (isset($_POST['id-' . $row["pri"]])) {
 					$db -> exec('DELETE FROM data where pri = '  . $row["pri"]);
 				}
-			}
 
 		?>
 	</div>
