@@ -110,7 +110,6 @@
 				echo $row["pri"];
 				if (isset($_POST["" . $row["pri"]])) {
 					$db -> exec('DELETE FROM data where pri = '  . $row["pri"]);
-					return;
 				}
 
 		?>
