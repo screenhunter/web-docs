@@ -30,6 +30,7 @@ session_start();
 			while ($row = $result->fetchArray())
 				if ($row["user"] == $user) {
 					echo $user . " is Taken!";
+					return;
 				}
 
 		header("Location: auth.php");
