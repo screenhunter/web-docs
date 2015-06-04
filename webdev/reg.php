@@ -34,7 +34,7 @@ session_start();
 					exit();
 				}
 		if ($pass == $conf) {
-			$db -> exec('INSERT INTO data (user, pass) VAlUES(' . $conf . ', "' . $pass . '");');
+			$db -> exec('INSERT INTO data (user, pass) VAlUES(' . $user . ', "' . $pass . '");');
 			header("Location: auth.php");
 			exit();
 		} else
