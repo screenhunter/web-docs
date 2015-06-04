@@ -3,3 +3,6 @@ body {
     background-color: #cccccc;
     color: white;
 }
+input {
+	margin: 10px;
+}
