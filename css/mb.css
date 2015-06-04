@@ -3,6 +3,6 @@ body {
     background-color: #cccccc;
     color: white;
 }
-input {
+input, select {
 	margin: 10px;
 }
