@@ -17,7 +17,7 @@
 
 		$db = new SQLite3("../res/login.db");
 
-		$db -> exec('CREATE TABLE IF NOT EXISTS data(user TEXT, pass TEXT, PRIMARY KEY (pri));');
+		$db -> exec('CREATE TABLE IF NOT EXISTS data(user TEXT, pass TEXT, PRIMARY KEY (user));');
 		$result = $db->query('SELECT * FROM data where user="' . $user . '"');
 			while ($row = $result->fetchArray())
 				if ($row["pass"] == $pass) {
