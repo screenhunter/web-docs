@@ -108,6 +108,7 @@ session_start();
 			while ($row = $result->fetchArray()) {
 
 				echo $row["mess"];
+				echo nl2br("\r\n");
 				echo 'Due: ' . convert($row["pri"]);
 				echo '<form action="mb.php" method="POST">';
 				echo '<button name = "id-' . $row["pri"] . '" type = "submit"> Delete </button>';
