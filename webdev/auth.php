@@ -8,6 +8,7 @@ session_start();
 	<title>Authentication</title>
 </head>
 <body>
+	<h1>Login to Message Board</h1>
 	<form action="auth.php" method="get">
 		Username:
 		<input type="text" name="user"><br>
