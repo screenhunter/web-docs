@@ -27,11 +27,50 @@
 			<input type="number" name="day"><br>
 			Year:
 			<input type="number" name="year"><br>
-			<button type="submit" id="btn">Add</button>
+			<button type="submit" name="add">Add</button>
 		</form>
 	</div>
 	<div id="Old">
 		<?php
+
+			if (isset($_POST["add"])) {
+
+				if (strlen($message) == 0)
+					return;
+
+				$message = rtrim($_POST['rem'], '%09%09');
+				$day = intval(rtrim($_POST['day'], '%09%09'));
+				$year = intval(rtrim($_POST['year'], '%09%09'));
+				$month = intval(rtrim($_POST['month'], '%09%09'));
+				$pri = $year*1000 + $month + $day;
+
+				$db = new SQLite3("../res/message.db");
+				$db -> exec('CREATE TABLE IF NOT EXISTS data(pri INTEGER, mess TEXT, PRIMARY KEY (pri));
+					INSERT OR REPLACE INTO data (pri, mess) VAlUES(' . $pri . ', "' . $message . '");
+				');
+
+				$result = $db->query('SELECT * FROM data ORDER BY pri');
+				while ($row = $result->fetchArray()) {
+
+					echo $row["mess"] . " " . convert($row["pri"]);
+					echo '<form action="messageboard.php" method="POST">';
+					echo '<button id = "' . $pri . '" type = "submit"> Delete </button>';
+					echo '</form>';
+					echo nl2br("\r\n");
+
+				}
+
+			} else {
+
+				$db = new SQLite3("../res/message.db");
+				$result = $db->query('SELECT pri FROM data');
+				while ($row = $result->fetchArray())
+					if (isset($_POST["".$row["pri"]])) {
+						$db -> exec('DELETE FROM data where pri = '  . $row["pri"]);
+						return;
+					}
+
+			}
 
 			function convert($value) {
 
@@ -81,28 +120,7 @@
 				
 			}
 
-			$message = rtrim($_POST['rem'], '%09%09');
-			$day = intval(rtrim($_POST['day'], '%09%09'));
-			$year = intval(rtrim($_POST['year'], '%09%09'));
-			$month = intval(rtrim($_POST['month'], '%09%09'));
-			$pri = $year*1000 + $month + $day;
-
-			$db = new SQLite3("../res/message.db");
-			$db -> exec('CREATE TABLE IF NOT EXISTS data(pri INTEGER, mess TEXT, PRIMARY KEY (pri));
-				INSERT OR REPLACE INTO data (pri, mess) VAlUES(' . $pri . ', "' . $message . '");
-			');
-
-			$result = $db->query('SELECT * FROM data ORDER BY pri');
-			while ($row = $result->fetchArray()) {
-
-				echo $row["mess"] . " " . convert($row["pri"]);
-				echo nl2br("\r\n");
-
-			}
-
 		?>
-
-
 
 	</div>
 </body>
