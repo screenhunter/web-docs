@@ -8,6 +8,7 @@ session_start();
 	<title>Register</title>
 </head>
 <body>
+	<h1>Register for Message Board</h1>
 	<form action="reg.php" method="get">
 		Username:
 		<input type="text" name="user"><br>

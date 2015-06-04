@@ -10,6 +10,9 @@ session_start();
 	?>
 </head>
 <body>
+	<?php
+		echo '<h1>' . $_SESSION['user'] . '\'s Message Board</h1>';
+	?>
 	<div id="insert">
 		<form action="mb.php" method="POST">
 			Reminder:
