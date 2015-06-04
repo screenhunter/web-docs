@@ -98,7 +98,7 @@
 
 				echo $row["mess"] . " " . convert($row["pri"]);
 				echo '<form action="messageboard.php" method="POST">';
-				echo '<button id = "' . $row["pri"] . '" type = "submit"> Delete </button>';
+				echo '<button id = "id-' . $row["pri"] . '" type = "submit"> Delete </button>';
 				echo '</form>';
 				echo nl2br("\r\n");
 
@@ -107,8 +107,7 @@
 			$db = new SQLite3("../res/message.db");
 			$result = $db->query('SELECT pri FROM data');
 			while ($row = $result->fetchArray())
-				echo 'DELETE FROM data where pri = '  . $row["pri"];
-				if (isset($_POST["" . $row["pri"]])) {
+				if (isset($_POST['id-' . $row["pri"]])) {
 					$db -> exec('DELETE FROM data where pri = '  . $row["pri"]);
 				}
 
