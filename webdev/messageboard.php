@@ -7,7 +7,7 @@
 	<div id="insert">
 		<form action="messageboard.php" method="POST">
 			Reminder:
-			<input type="text" id="rem" name="rem"><br>
+			<input type="text" id="rem" name="rem" size="50"><br>
 			Month:
 			<select  name="month">
   				<option value="0">January</option>
@@ -98,11 +98,12 @@
 				if (isset($_POST['id-' . $row["pri"]])) {
 					$db -> exec('DELETE FROM data where pri = '  . $row["pri"]);
 				}
-			
+
 			$result = $db->query('SELECT * FROM data ORDER BY pri');
 			while ($row = $result->fetchArray()) {
 
-				echo $row["mess"] . " " . convert($row["pri"]);
+				echo $row["mess"]
+				echo 'Due: ' . convert($row["pri"]);
 				echo '<form action="messageboard.php" method="POST">';
 				echo '<button name = "id-' . $row["pri"] . '" type = "submit"> Delete </button>';
 				echo '</form>';
