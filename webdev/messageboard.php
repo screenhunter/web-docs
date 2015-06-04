@@ -39,8 +39,8 @@
 			$pri = $year*1000 + $month + $day;
 
 			$db = new SQLite3("../res/message.db");
-			$db -> exec('CREATE TABLE IF NOT EXISTS data(pri INTEGER, mess TEXT, PRIMARY KEY (due));
-				INSERT OR REPLACE INTO data (id, file) VAlUES(' . $pri . ', "' . $message . '");
+			$db -> exec('CREATE TABLE IF NOT EXISTS data(pri INTEGER, mess TEXT, PRIMARY KEY (pri));
+				INSERT OR REPLACE INTO data (pri, mess) VAlUES(' . $pri . ', "' . $message . '");
 			');
 
 			$result = $db->query('SELECT * FROM data ORDER BY pri');
