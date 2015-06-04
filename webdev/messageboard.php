@@ -103,7 +103,6 @@
 
 			}
 
-			$db = new SQLite3("../res/message.db");
 			$result = $db->query('SELECT pri FROM data');
 			while ($row = $result->fetchArray()){
 				echo 'id-' . $row["pri"];
