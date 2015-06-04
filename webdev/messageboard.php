@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Rajat's Personal Message Board</title>
+	<?php
+		echo '<title>' . $_SESSION['user'] . '\'s Message Board</title>';
+	?>
 </head>
 <body>
 	<div id="insert">
 		<form action="messageboard.php" method="POST">
 			Reminder:
-			<input type="text" id="rem" name="rem" size="50"><br>
+			<input type="text" name="rem" size="50"><br>
 			Month:
 			<select  name="month">
   				<option value="0">January</option>
@@ -30,7 +32,7 @@
 			<button type="submit" name="add">Add</button>
 		</form>
 	</div>
-	<div id="Old">
+	<div id="messages">
 		<?php
 
 			function convert($value) {
@@ -80,7 +82,7 @@
 				return $month . " " . $day . ", " . $year;
 				
 			}
-
+			$user = $_SESSION['user'];
 			$message = rtrim($_POST['rem'], '%09%09');
 			$day = intval(rtrim($_POST['day'], '%09%09'));
 			$year = intval(rtrim($_POST['year'], '%09%09'));
