@@ -90,7 +90,7 @@
 			$pri = $year*1000 + $month + $day;
 
 			$db = new SQLite3("../res/" . $user . ".db");
-			$db -> exec('CREATE TABLE IF NOT EXISTS data(pri INTEGER, mess TEXT, PRIMARY KEY (pri)');
+			$db -> exec('CREATE TABLE IF NOT EXISTS data(pri INTEGER, mess TEXT, PRIMARY KEY (pri))');
 			if (strlen($message) != 0)
 				$db -> exec('INSERT OR REPLACE INTO data (pri, mess) VAlUES(' . $pri . ', "' . $message . '");');
 
