@@ -89,7 +89,7 @@
 			$month = intval(rtrim($_POST['month'], '%09%09'));
 			$pri = $year*1000 + $month + $day;
 
-			$db = new SQLite3("../res/message.db");
+			$db = new SQLite3("../res/" . $user . ".db");
 			if (strlen($message) != 0)
 				$db -> exec('CREATE TABLE IF NOT EXISTS data(pri INTEGER, mess TEXT, PRIMARY KEY (pri));
 					INSERT OR REPLACE INTO data (pri, mess) VAlUES(' . $pri . ', "' . $message . '");
