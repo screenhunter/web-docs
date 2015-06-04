@@ -35,7 +35,7 @@
 
 			function convert($value) {
 
-				$year = $value/1000;
+				$year = floor($value/1000);
 				$value -= $year*1000;
 				$month = "";
 				$day = 0;
