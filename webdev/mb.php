@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
 	<div id="insert">
-		<form action="messageboard.php" method="POST">
+		<form action="mb.php" method="POST">
 			Reminder:
 			<input type="text" name="rem" size="50"><br>
 			Month:
@@ -109,7 +109,7 @@ session_start();
 
 				echo $row["mess"];
 				echo 'Due: ' . convert($row["pri"]);
-				echo '<form action="messageboard.php" method="POST">';
+				echo '<form action="mb.php" method="POST">';
 				echo '<button name = "id-' . $row["pri"] . '" type = "submit"> Delete </button>';
 				echo '</form>';
 
