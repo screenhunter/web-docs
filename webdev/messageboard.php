@@ -102,7 +102,7 @@
 			$result = $db->query('SELECT * FROM data ORDER BY pri');
 			while ($row = $result->fetchArray()) {
 
-				echo $row["mess"]
+				echo $row["mess"];
 				echo 'Due: ' . convert($row["pri"]);
 				echo '<form action="messageboard.php" method="POST">';
 				echo '<button name = "id-' . $row["pri"] . '" type = "submit"> Delete </button>';
