@@ -5,7 +5,7 @@
 </head>
 <body>
 	<div id="insert">
-		<form action="finder.php" method="POST">
+		<form action="messageboard.php" method="POST">
 			Reminder:
 			<input type="text" id="rem" name="rem"><br>
 			Month:
