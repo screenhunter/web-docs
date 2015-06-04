@@ -18,12 +18,12 @@ session_start();
 		<button type="submit" name="log">Register</button>
 	</form>
 	<?php
-		if (strlen($user) == 0 || strlen($user) == 0 || strlen($user) == 0)
-			return;
 
 		$user = rtrim($_GET['user'], '%09%09');
 		$pass = rtrim($_GET['pass'], '%09%09');
 		$conf = rtrim($_GET['conf'], '%09%09');
+		if (strlen($user) == 0 || strlen($pass) == 0 || strlen($conf) == 0)
+			return;
 
 		$db = new SQLite3("../res/login.db");
 		$db -> exec('CREATE TABLE IF NOT EXISTS data(user TEXT, pass TEXT, PRIMARY KEY (user));');
