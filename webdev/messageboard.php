@@ -98,7 +98,7 @@
 
 				echo $row["mess"] . " " . convert($row["pri"]);
 				echo '<form action="messageboard.php" method="POST">';
-				echo '<button id = "' . $pri . '" type = "submit"> Delete </button>';
+				echo '<button id = "' . $row["pri"] . '" type = "submit"> Delete </button>';
 				echo '</form>';
 				echo nl2br("\r\n");
 
