@@ -1,0 +1,11 @@
+#background-image {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url("../res/mbkg.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    /*
+    -webkit-filter: blur(5px);
+    */
+}

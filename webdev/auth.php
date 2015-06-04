@@ -3,6 +3,7 @@
 // Start the session
 session_start();
 ?>
+<link href="../css/mb.css" rel="stylesheet">
 <html>
 <head>
 	<title>Authentication</title>
