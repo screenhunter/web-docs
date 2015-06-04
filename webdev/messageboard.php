@@ -44,8 +44,12 @@
 			');
 
 			$result = $db->query('SELECT * FROM data ORDER BY pri');
-			while ($row = $result->fetchArray())
-				print_r($row);
+			while ($row = $result->fetchArray()) {
+
+				echo $row["mess"] . " " . $row["pri"];
+				nl2br("\r\n");
+
+			}
 
 		?>
 
