@@ -93,6 +93,12 @@
 					INSERT OR REPLACE INTO data (pri, mess) VAlUES(' . $pri . ', "' . $message . '");
 				');
 
+			$result = $db->query('SELECT pri FROM data');
+			while ($row = $result->fetchArray())
+				if (isset($_POST['id-' . $row["pri"]])) {
+					$db -> exec('DELETE FROM data where pri = '  . $row["pri"]);
+				}
+			
 			$result = $db->query('SELECT * FROM data ORDER BY pri');
 			while ($row = $result->fetchArray()) {
 
@@ -102,12 +108,6 @@
 				echo '</form>';
 
 			}
-
-			$result = $db->query('SELECT pri FROM data');
-			while ($row = $result->fetchArray())
-				if (isset($_POST['id-' . $row["pri"]])) {
-					$db -> exec('DELETE FROM data where pri = '  . $row["pri"]);
-				}
 
 		?>
 	</div>
