@@ -43,7 +43,7 @@
 				INSERT OR REPLACE INTO data (pri, mess) VAlUES(' . $pri . ', "' . $message . '");
 			');
 
-			$result = $db->query('SELECT mess FROM data ORDER BY pri');
+			$result = $db->query('SELECT * FROM data ORDER BY pri');
 			while ($row = $result->fetchArray())
 				print_r($row);
 
