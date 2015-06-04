@@ -37,7 +37,6 @@ session_start();
 		if ($pass == $conf) {
 			$db -> exec('INSERT INTO data (user, pass) VAlUES(' . $user . ', "' . $pass . '");');
 			header("Location: auth.php");
-			exit();
 		} else
 			echo "Passwords did not match!";
 
