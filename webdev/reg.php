@@ -27,9 +27,9 @@ session_start();
 		$result = $db->query('SELECT * FROM data where user="' . $user . '"');
 			while ($row = $result->fetchArray())
 				if ($row["user"] == $user) {
-					echo $user . " is Taken!"
+					echo $user . " is Taken!";
 				}
-		
+
 		header("Location: auth.php");
 		exit();
 
