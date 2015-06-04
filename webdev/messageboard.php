@@ -96,7 +96,7 @@
 			while ($row = $result->fetchArray()) {
 
 				echo $row["mess"] . " " . convert($row["pri"]);
-				nl2br("\r\n");
+				echo nl2br("\r\n");
 
 			}
 
