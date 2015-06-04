@@ -107,7 +107,8 @@
 			$db = new SQLite3("../res/message.db");
 			$result = $db->query('SELECT pri FROM data');
 			while ($row = $result->fetchArray())
-				if (isset($_POST["".$row["pri"]])) {
+				echo $row["pri"];
+				if (isset($_POST["" . $row["pri"]])) {
 					$db -> exec('DELETE FROM data where pri = '  . $row["pri"]);
 					return;
 				}
