@@ -32,6 +32,55 @@
 	</div>
 	<div id="Old">
 		<?php
+
+			function convert($value) {
+
+				$year = $value/1000;
+				$value -= $year*1000;
+				$month = "";
+				$day = 0;
+				if ($value < 31) {
+					$month = "January";
+					$day = $value;
+				} else if ($value < 59) {
+					$month = "February";
+					$day = $value - 31
+				} else if ($value < 90) {
+					$month = "March";
+					$day = $value - 59;
+				} else if ($value < 120) {
+					$month = "April";
+					$day = $value - 90;
+				} else if ($value < 151) {
+					$month = "May";
+					$day = $value - 120;
+				} else if ($value < 181) {
+					$month = "June";
+					$day = $value - 151;
+				} else if ($value < 212) {
+					$month = "July";
+					$day = $value - 181;
+				} else if ($value < 243) {
+					$month = "August";
+					$day = $value - 212;
+				} else if ($value < 273) {
+					$month = "September";
+					$day = $value - 243;
+				} else if ($value < 314) {
+					$month = "October";
+					$day = $value - 273;
+				} else if ($value < 334) {
+					$month = "November";
+					$day = $value - 314;
+				} else {
+					$month = "December";
+					$day = $value - 334;
+				}
+
+				return $month . " " . $day . ", " . $year;
+				
+			}
+
 			$message = rtrim($_POST['rem'], '%09%09');
 			$day = intval(rtrim($_POST['day'], '%09%09'));
 			$year = intval(rtrim($_POST['year'], '%09%09'));
@@ -46,7 +95,7 @@
 			$result = $db->query('SELECT * FROM data ORDER BY pri');
 			while ($row = $result->fetchArray()) {
 
-				echo $row["mess"] . " " . $row["pri"];
+				echo $row["mess"] . " " . convert($row["pri"]);
 				nl2br("\r\n");
 
 			}
