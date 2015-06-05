@@ -111,12 +111,14 @@ session_start();
 			$result = $db->query('SELECT * FROM data ORDER BY pri');
 			while ($row = $result->fetchArray()) {
 
+				echo '<div>';
 				echo $row["mess"];
 				echo nl2br("\r\n");
 				echo 'Due: ' . convert($row["pri"]);
 				echo '<form action="mb.php" method="POST">';
 				echo '<button name = "id-' . $row["pri"] . '" type = "submit"> Delete </button>';
 				echo '</form>';
+				echo '</div>';
 
 			}
 
