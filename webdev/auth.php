@@ -21,6 +21,7 @@ session_start();
 		<button type="submit" name="reg">Register</button>
 	</form>
 	<?php
+		$_SESSION['user'] = "";
 		$user = rtrim($_POST['user'], '%09%09');
 		$pass = rtrim($_POST['pass'], '%09%09');
 
