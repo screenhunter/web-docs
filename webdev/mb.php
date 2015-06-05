@@ -17,7 +17,7 @@ session_start();
 	<div id="insert">
 		<form action="mb.php" method="POST">
 			Reminder:
-			<input type="text" name="rem" size="50"><br>
+			<input type="text" id="rem" name="rem" size="50" oninput="checkMess();"><br>
 			Month:
 			<select  name="month">
   				<option value="0">January</option>
@@ -34,10 +34,10 @@ session_start();
 				<option value="334">December</option>
 			</select><br>
 			Day:
-			<input type="number" name="day"><br>
+			<input type="number" id="day" name="day"><br>
 			Year:
-			<input type="number" name="year"><br>
-			<button type="submit" name="add">Add</button>
+			<input type="number" id="year" name="year"><br>
+			<button type="submit" id="btn" name="add">Add</button>
 		</form>
 	</div>
 	<div id="messages">
@@ -122,5 +122,16 @@ session_start();
 
 		?>
 	</div>
+	<script type="text/javascript">
+		function checkMess() {
+
+			a = document.getElementById("string").value;
+			reg = new RegExp("^([a-zA-z0-9]{1,})((( ){0,})([a-zA-z0-9]{0,})){0,}$");
+			if (reg.test(a))
+				document.getElementById("btn").disabled = false;
+			else
+				document.getElementById("btn").disabled = true;
+		}
+	</script>
 </body>
 </html>
