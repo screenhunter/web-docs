@@ -2,6 +2,8 @@
 <?php
 // Start the session
 session_start();
+if (strlen($_SESSION['user']) == 0)
+	header("Location: auth.php");
 ?>
 <link href="../css/mb.css" rel="stylesheet">
 <html>
