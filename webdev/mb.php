@@ -16,6 +16,11 @@ if (strlen($_SESSION['user']) == 0)
 	<?php
 		echo '<h1>' . $_SESSION['user'] . '\'s Message Board</h1>';
 	?>
+	<div id="logout" position="absolute" top="0" right="0">
+		<form action="auth.php" method="POST">
+			<button type="submit" name="logout">Logout</button>
+		</form>
+	</div>
 	<div id="insert">
 		<form action="mb.php" method="POST">
 			Reminder:
