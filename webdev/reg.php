@@ -10,7 +10,7 @@ session_start();
 </head>
 <body>
 	<h1>Register for Message Board</h1>
-	<form action="reg.php" method="get">
+	<form action="reg.php" method="POST">
 		Username:
 		<input type="text" name="user"><br>
 		Password:
@@ -21,9 +21,9 @@ session_start();
 	</form>
 	<?php
 
-		$user = rtrim($_GET['user'], '%09%09');
-		$pass = rtrim($_GET['pass'], '%09%09');
-		$conf = rtrim($_GET['conf'], '%09%09');
+		$user = rtrim($_POST['user'], '%09%09');
+		$pass = rtrim($_POST['pass'], '%09%09');
+		$conf = rtrim($_POST['conf'], '%09%09');
 		if (strlen($user) == 0 || strlen($pass) == 0 || strlen($conf) == 0)
 			exit();
 

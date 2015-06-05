@@ -10,19 +10,19 @@ session_start();
 </head>
 <body>
 	<h1>Login to Message Board</h1>
-	<form action="auth.php" method="get">
+	<form action="auth.php" method="POST">
 		Username:
 		<input type="text" name="user"><br>
 		Password:
 		<input type="password" name="pass"><br>
 		<button type="submit" name="log">Login</button>
 	</form>
-	<form action="reg.php" method="get">
+	<form action="reg.php" method="POST">
 		<button type="submit" name="reg">Register</button>
 	</form>
 	<?php
-		$user = rtrim($_GET['user'], '%09%09');
-		$pass = rtrim($_GET['pass'], '%09%09');
+		$user = rtrim($_POST['user'], '%09%09');
+		$pass = rtrim($_POST['pass'], '%09%09');
 
 		$db = new SQLite3("../res/login.db");
 
