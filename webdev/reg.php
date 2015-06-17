@@ -43,7 +43,9 @@ session_start();
 			echo "Passwords did not match!";
 
 	?>
-	<script type="text/javascript">
+</body>
+
+<script type="text/javascript">
 		function check() {
 
 			a = document.getElementById("user").value;
@@ -55,5 +57,4 @@ session_start();
 				document.getElementById("btn").disabled = false;
 		}
 	</script>
-</body>
 </html>
