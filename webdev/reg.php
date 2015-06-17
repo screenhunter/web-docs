@@ -44,17 +44,16 @@ session_start();
 
 	?>
 </body>
-
 <script type="text/javascript">
-		function check() {
+	function check() {
 
-			a = document.getElementById("user").value;
-			b = document.getElementById("pass").value;
-			c = document.getElementById("conf").value;
-			if (a.length == 0 || b.length == 0 || c.length == 0)
-				document.getElementById("btn").disabled = true;
-			else
-				document.getElementById("btn").disabled = false;
-		}
-	</script>
+		a = document.getElementById("user").value;
+		b = document.getElementById("pass").value;
+		c = document.getElementById("conf").value;
+		if (a.length == 0 || b.length == 0 || c.length == 0)
+			document.getElementById("btn").disabled = true;
+		else
+			document.getElementById("btn").disabled = false;
+	}
+</script>
 </html>
