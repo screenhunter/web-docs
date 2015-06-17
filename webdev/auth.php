@@ -12,10 +12,10 @@ session_start();
 	<h1>Login to Message Board</h1>
 	<form action="auth.php" method="POST">
 		Username:
-		<input type="text" name="user"><br>
+		<input type="text" name="user" id="user" oninput="check();"><br>
 		Password:
-		<input type="password" name="pass"><br>
-		<button type="submit" name="log">Login</button>
+		<input type="password" name="pass" id="pass" oninput="check();"><br>
+		<button type="submit" name="log" id="btn" disabled="true">Login</button>
 	</form>
 	<form action="reg.php" method="POST">
 		<button type="submit" name="reg">Register</button>
@@ -42,5 +42,17 @@ session_start();
 	?>
 
 </body>
+
+<script type="text/javascript">
+	function check() {
+
+		a = document.getElementById("user").value;
+		b = document.getElementById("pass").value;
+		if (a.length == 0 || b.length == 0 || c.length == 0)
+			document.getElementById("btn").disabled = true;
+		else
+			document.getElementById("btn").disabled = false;
+	}
+</script>
 
 </html>
