@@ -17,7 +17,7 @@ session_start();
 		<input type="password" name="pass" id="pass" oninput="check();"><br>
 		Confirm Password:
 		<input type="password" name="conf" id="conf" oninput="check();"><br>
-		<button type="submit" name="log" disabled="true">Register</button>
+		<button type="submit" name="log" id="btn" disabled="true">Register</button>
 	</form>
 	<?php
 
