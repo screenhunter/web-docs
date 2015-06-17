@@ -48,7 +48,7 @@ session_start();
 
 		a = document.getElementById("user").value;
 		b = document.getElementById("pass").value;
-		if (a.length == 0 || b.length == 0 || c.length == 0)
+		if (a.length == 0 || b.length == 0)
 			document.getElementById("btn").disabled = true;
 		else
 			document.getElementById("btn").disabled = false;
