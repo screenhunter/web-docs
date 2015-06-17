@@ -12,12 +12,12 @@ session_start();
 	<h1>Register for Message Board</h1>
 	<form action="reg.php" method="POST">
 		Username:
-		<input type="text" name="user" id="user" oninput="check();"><br>
+		<input type="text" name="user"><br>
 		Password:
-		<input type="password" name="pass" id="pass" oninput="check();"><br>
+		<input type="password" name="pass"><br>
 		Confirm Password:
-		<input type="password" name="conf" id="conf" oninput="check();"><br>
-		<button type="submit" name="log" disabled="true">Register</button>
+		<input type="password" name="conf"><br>
+		<button type="submit" name="log">Register</button>
 	</form>
 	<?php
 
@@ -43,17 +43,6 @@ session_start();
 			echo "Passwords did not match!";
 
 	?>
-	<!--<script type="text/javascript">
-		function check() {
 
-			a = document.getElementById("user").value;
-			b = document.getElementById("pass").value;
-			c = document.getElementById("conf").value;
-			if (a.length == 0 || b.length == 0 || c.length == 0)
-				document.getElementById("btn").disabled = true;
-			else
-				document.getElementById("btn").disabled = false;
-		}
-	</script> -->
 </body>
 </html>
