@@ -21,8 +21,8 @@ session_start();
 		<button type="submit" name="reg">Register</button>
 	</form>
 	<?php
-		if (strlen($user) == 0 || strlen($pass) == 0 || strlen($conf) == 0)
-			exit();
+		if (strlen($user) == 0 || strlen($pass) == 0 || strlen($conf) == 0);
+		else {
 		$_SESSION['user'] = "";
 		$user = rtrim($_POST['user'], '%09%09');
 		$pass = rtrim($_POST['pass'], '%09%09');
@@ -37,6 +37,7 @@ session_start();
 					header("Location: mb.php");
 					exit();
 				}
+			}
 
 	?>
 

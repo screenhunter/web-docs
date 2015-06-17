@@ -24,8 +24,8 @@ session_start();
 		$user = rtrim($_POST['user'], '%09%09');
 		$pass = rtrim($_POST['pass'], '%09%09');
 		$conf = rtrim($_POST['conf'], '%09%09');
-		if (strlen($user) == 0 || strlen($pass) == 0 || strlen($conf) == 0)
-			exit();
+		if (strlen($user) == 0 || strlen($pass) == 0 || strlen($conf) == 0);
+		else {
 
 		$db = new SQLite3("../res/login.db");
 		$db -> exec('CREATE TABLE IF NOT EXISTS data(user TEXT, pass TEXT, PRIMARY KEY (user));');
@@ -41,6 +41,7 @@ session_start();
 			header("Location: auth.php");
 		} else
 			echo "Passwords did not match!";
+		}
 
 	?>
 </body>
